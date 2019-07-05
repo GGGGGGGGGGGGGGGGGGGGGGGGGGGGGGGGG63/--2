@@ -36,7 +36,7 @@ int main()
 {   int i=0;
     ifstream Refereein("/Users/s20181105880/Desktop/裁判.txt");
     ifstream Studentin("/Users/s20181105880/Desktop/学生.txt");
-    ofstream Allout   ("/Users/s20181105880/Desktop/输出.xls");
+    ofstream OutputAchievements("/Users/s20181105880/Desktop/输出.xls");
     if(Refereein.is_open())//裁判输入
     {
         while(!Refereein.eof() && i<REFEREENUMBER)
@@ -87,12 +87,12 @@ int main()
     sort(student,student+STUDENTNUMBER,judge);
     for(int i=0;i<STUDENTNUMBER;i++)
     {
-        Allout<<student[i].Number;
-        Allout<<" "<<student[i].Name;
-        Allout<<" "<<student[i].Sex;
-        Allout<<" "<<student[i].College;
-        Allout<<" "<<student[i].Sum;
-        Allout<<endl;
+        OutputAchievements<<student[i].Number;
+        OutputAchievements<<" "<<student[i].Name;
+        OutputAchievements<<" "<<student[i].Sex;
+        OutputAchievements<<" "<<student[i].College;
+        OutputAchievements<<" "<<student[i].Sum;
+        OutputAchievements<<endl;
     }
     return 0;
 }
